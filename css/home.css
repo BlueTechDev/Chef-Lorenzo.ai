@@ -55,6 +55,13 @@ nav ul li:nth-child(5) a {
     font-weight: bold;
 }
 
+nav ul li:nth-child(5) a:hover {
+    text-decoration: underline;
+    font-size: 24px;
+    color: #daa520;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #fff;
+}
 
 nav ul a:hover {
     text-decoration: underline;
