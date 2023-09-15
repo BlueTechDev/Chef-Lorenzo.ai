@@ -43,3 +43,27 @@ function showSlides() {
     slides[slideIndex - 1].style.display = 'block';
     setTimeout(showSlides, 2000); // Change slide every 2 seconds (adjust as needed)
 }
+
+// Show or hide the scroll-to-top button based on scroll position
+window.onscroll = function () {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    const scrollHeight = document.documentElement.scrollHeight;
+    const clientHeight = document.documentElement.clientHeight;
+
+    if (document.documentElement.scrollTop > scrollHeight - clientHeight - 100) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+}
+
+// Scroll to the top of the page when the button is clicked
+document.getElementById("scrollToTopBtn").addEventListener("click", function () {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
+

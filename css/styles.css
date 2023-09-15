@@ -146,6 +146,32 @@ main {
     }
 }
 
+#scrollToTopBtn {
+   display:none;
+   position:fixed;
+   bottom:6vh;
+   right:9vw;
+   width:auto;
+   margin-top: 0.5rem;
+   padding: 0.3rem 0.7rem;
+   font-size: 0.8rem;
+   background-color: #daa520;
+   color: #fff;
+   text-decoration: none;
+   border-radius: 4px;
+   background-image: url("../images/up_arrow.png");
+   background-repeat: no-repeat, repeat;
+   background-position: center left , top right ;
+}
+
+#scrollToTopBtn:hover {
+    background:#fff !important;
+    background:-moz-linear-gradient(left,#fff); /* For Firefox */
+    background:-o-linear-gradient(bottom,#fff) /* Opera */;
+    background: linear-gradient(to right,#fff,#f2b8a1)!important;
+    cursor : pointer!important;
+}
+
 
 footer {
     background-color: #efd5bc;
