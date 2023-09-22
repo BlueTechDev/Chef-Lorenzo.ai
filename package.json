@@ -1,0 +1,12 @@
+{
+  "name": "chef~lorenzo.ai",
+  "version": "1.0.0",
+  "description": "Lorenzo - Your Culinary Guide Overview Lorenzo is a virtual culinary guide designed to assist users in their cooking adventures. Whether you're a novice in the kitchen or an experienced chef, Lorenzo is here to make your culinary journey exciting and delicious. With Lorenzo, you can explore a world of recipes, join virtual cooking classes, take on weekly cooking challenges, and receive cooking tips and techniques.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

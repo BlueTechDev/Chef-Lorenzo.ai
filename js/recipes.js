@@ -29,6 +29,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Get references to the input field and send button
+const userMessageInput = document.getElementById('userMessage');
+const sendMessageButton = document.getElementById('sendMessage');
+
+// Add an event listener to the send button
+sendMessageButton.addEventListener('click', () => {
+    // Get the user's message from the input field
+    const userMessage = userMessageInput.value;
+
+    // Send the message (you can define this function)
+    sendMessage(userMessage);
+
+    // Clear the input field
+    userMessageInput.value = '';
+});
+
+// Function to send the user's message
+function sendMessage(message) {
+    // Handle the logic for sending the message here
+    // For example, you can add the message to the chat container
+    // and process any responses from an API
+    // Remember to update the chat container with the response
+}
+
+
 // Get the chat container element
 const chatContainer = document.querySelector('.chat-messages');
 
@@ -44,7 +69,20 @@ function addMessage(text, isUser = false) {
 
     messageDiv.appendChild(messageText);
     chatContainer.appendChild(messageDiv);
+
+    // Assuming userMessage is a global variable containing the user's message
+    if (isUser) {
+        const userMessageDiv = document.createElement('div');
+        userMessageDiv.classList.add('chat-message', 'user');
+
+        const userMessageText = document.createElement('p');
+        userMessageText.textContent = userMessage;
+
+        userMessageDiv.appendChild(userMessageText);
+        chatContainer.appendChild(userMessageDiv);
+    }
 }
+
 
 // Populate initial greeting message
 addMessage("Ah, bonjour! 🍽️ Welcome to my culinary kingdom. How may I assist you today? You have several options to choose from:");
